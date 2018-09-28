@@ -1,0 +1,233 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "テローコントローラー",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ControllIntent",
+                    "slots": [
+                        {
+                            "name": "action",
+                            "type": "action"
+                        },
+                        {
+                            "name": "direction",
+                            "type": "direction"
+                        },
+                        {
+                            "name": "particle",
+                            "type": "particle"
+                        },
+                        {
+                            "name": "unit",
+                            "type": "unit"
+                        },
+                        {
+                            "name": "number",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{action} {particle} {number} {unit}",
+                        "{number} {unit} {direction}",
+                        "{direction} {particle} {number} {unit}",
+                        "{number} {unit} {direction} {particle} {action}",
+                        "{number} {unit} {direction} {action}",
+                        "{number} {unit} {action}",
+                        "{direction} {particle} {number} {unit} {action}",
+                        "{direction} {particle} {action}",
+                        "{direction} {action}",
+                        "{action}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "action",
+                    "values": [
+                        {
+                            "id": "move",
+                            "name": {
+                                "value": "移動",
+                                "synonyms": [
+                                    "ムーブ"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "flip",
+                            "name": {
+                                "value": "フリップ",
+                                "synonyms": [
+                                    "フリッパー",
+                                    "フィリップ",
+                                    "フリック",
+                                    "クリップ",
+                                    "グリップ"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "turn",
+                            "name": {
+                                "value": "旋回",
+                                "synonyms": [
+                                    "廻り",
+                                    "回り"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "down",
+                            "name": {
+                                "value": "下降",
+                                "synonyms": [
+                                    "加工",
+                                    "過去",
+                                    "下"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "up",
+                            "name": {
+                                "value": "上昇",
+                                "synonyms": [
+                                    "上"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "land",
+                            "name": {
+                                "value": "着陸",
+                                "synonyms": [
+                                    "着地"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "takeoff",
+                            "name": {
+                                "value": "離陸",
+                                "synonyms": [
+                                    "りく",
+                                    "発信",
+                                    "発進"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "direction",
+                    "values": [
+                        {
+                            "id": "back",
+                            "name": {
+                                "value": "バック",
+                                "synonyms": [
+                                    "白",
+                                    "パック",
+                                    "バッグ",
+                                    "交代",
+                                    "後ろ",
+                                    "後退"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "forward",
+                            "name": {
+                                "value": "前",
+                                "synonyms": [
+                                    "電信",
+                                    "転身",
+                                    "フライト",
+                                    "フロント",
+                                    "全身",
+                                    "前方",
+                                    "前進"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "left",
+                            "name": {
+                                "value": "左"
+                            }
+                        },
+                        {
+                            "id": "right",
+                            "name": {
+                                "value": "右",
+                                "synonyms": [
+                                    "ミニ"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "unit",
+                    "values": [
+                        {
+                            "id": "cm",
+                            "name": {
+                                "value": "センチ",
+                                "synonyms": [
+                                    "cm",
+                                    "センチメートル"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "angle",
+                            "name": {
+                                "value": "度",
+                                "synonyms": [
+                                    "℃"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "particle",
+                    "values": [
+                        {
+                            "id": "particle",
+                            "name": {
+                                "value": "助詞",
+                                "synonyms": [
+                                    "から",
+                                    "より",
+                                    "や",
+                                    "で",
+                                    "と",
+                                    "へ",
+                                    "に",
+                                    "を",
+                                    "の",
+                                    "が"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
