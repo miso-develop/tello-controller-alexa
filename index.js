@@ -38,6 +38,7 @@ const sendTello = async buf => {
 
 const checkDistance = number => {
     number = Number(number)
+    // 200 -> 500 とすることで最大500cmまで指定可能
     return number >= 0 && (number >= 20 && number <= 200)
 }
 
@@ -189,8 +190,6 @@ const ControllHandler = {
                 err = true
         }
         console.log(command)
-        console.log(commandName)
-        console.log("")
         
         // send tello
         let message = `命令に誤りがあります！もう一度${REPROMPT_MESSAGE}`
@@ -199,6 +198,8 @@ const ControllHandler = {
             await sendTello(command)
             message = `ラジャー！${commandName}します！`
         }
+        console.log(message)
+        console.log("")
         
         // speak
         return handlerInput.responseBuilder
